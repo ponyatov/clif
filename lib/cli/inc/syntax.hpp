@@ -1,5 +1,7 @@
 #pragma once
 
+#include "libc.hpp"
+
 extern int yylex();
 extern int yylineno;
 extern char *yytext;

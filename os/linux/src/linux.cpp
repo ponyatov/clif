@@ -1,4 +1,7 @@
 #include "clif.hpp"
+#include "main.hpp"
+#include "libc.hpp"
+#include "syntax.hpp"
 
 int main(int argc, char *argv[]) {
     arg(0, argv[0]);
