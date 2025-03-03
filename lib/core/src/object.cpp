@@ -10,7 +10,7 @@ Object::Object() {
     mark = false;
 }
 
-Object::~Object() { assert(!ref); }
+Object::~Object() { assert(ref == 0); }
 
 void Object::rc() { ref++; }
 

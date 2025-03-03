@@ -12,5 +12,6 @@ void dump() {
 
 void push(Object* o) {
     assert(Dp < Dsz);
-    D[Dp++] = o; o->rc();
+    D[Dp++] = o;
+    o->rc();
 }
