@@ -9,3 +9,11 @@ class Int : public Object {
     Int(char* s);
     void dump();
 };
+
+class Num : public Object {
+    float value;
+
+   public:
+    Num(char* s);
+    void dump();
+};

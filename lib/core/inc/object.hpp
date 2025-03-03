@@ -4,6 +4,7 @@
 
 class Object {
     static void gc();
+    bool mark;
     static Object* pool;
     Object* next;
     uint ref;

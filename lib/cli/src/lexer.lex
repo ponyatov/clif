@@ -12,6 +12,7 @@ n [0-9]
 #[^\n]*     {}              // line comment
 [ \t\r\n]+  {}              // drop spaces
 
-{s}{n}+     TOKEN(Int,INT)
+{s}{n}+\.{n}+   TOKEN(Num,NUM)  // float
+{s}{n}+         TOKEN(Int,INT)  // integer
 
 .           {yyerror("");}  // any undetected char
