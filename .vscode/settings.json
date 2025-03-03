@@ -82,7 +82,7 @@
     "cmake.buildBeforeRun"  : true,
     "cmake.saveBeforeBuild" : true,
     "cmake.debugConfig"     : {
-        "args": [ "${workspaceFolder}/lib/app.ini" ] },
+        "args": [ "${workspaceFolder}/lib/${workspaceFolderBasename}.ini" ] },
     "cmake.allowCommentsInPresetsFile" : true,
 
     // MinGW/MSYS2

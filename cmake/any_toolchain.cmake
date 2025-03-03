@@ -30,6 +30,8 @@ add_compile_options(
     "-D${HW_}" "-D${CPU_}" "-D${ARCH_}" "-D${OS_}"
     -Wall -Wextra               # -Wpedantic
     -Wno-implicit-fallthrough   # ragel
+    -Wno-unused-function        # flex
+    -Wno-write-strings          # yacc
     $<$<CONFIG:Debug>:-DDEBUG>
 )
 
