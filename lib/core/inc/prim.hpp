@@ -4,7 +4,7 @@
 
 /// @defgroup prim prim
 /// @ingroup core
-/// @brief scalars/primitives
+/// @brief primitive/scalar
 
 /// @ingroup prim
 /// @brief signed integer number
