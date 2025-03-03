@@ -82,6 +82,7 @@
     "cmake.buildBeforeRun"  : true,
     "cmake.saveBeforeBuild" : true,
     "cmake.debugConfig"     : {
+        "cwd" :   "${workspaceFolder}",
         "args": [ "${workspaceFolder}/lib/${workspaceFolderBasename}.ini" ] },
     "cmake.allowCommentsInPresetsFile" : true,
 
