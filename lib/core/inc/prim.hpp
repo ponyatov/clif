@@ -2,6 +2,12 @@
 
 #include "object.hpp"
 
+/// @defgroup prim prim
+/// @ingroup core
+/// @brief scalars/primitives
+
+/// @ingroup prim
+/// @brief signed integer number
 class Int : public Object {
     int value;
 
@@ -10,6 +16,8 @@ class Int : public Object {
     void dump();
 };
 
+/// @ingroup prim
+/// @brief floating point number
 class Num : public Object {
     float value;
 

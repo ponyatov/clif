@@ -4,21 +4,26 @@
 
 /// @defgroup gc gc
 /// @ingroup core
+/// @brief Garbage Collector
 
-class Object {
+/// @brief root class for all objects
 /// @ingroup core
-/// @{
-    static void gc();
-    bool mark;
-    static Object* pool;
-    Object* next;
-    uint ref;
-/// @}
+class Object {
+    /// @ingroup gc
+    /// @{
+    bool mark;            ///< marked object in @ref gc
+    static Object* pool;  ///< global object @ref pool
+    Object* next;         ///< next object in linked list
+
+    /// @}
 
    public:
-    /// @brief @ref ref ++
     /// @ingroup gc
-    void rc();  
+    /// @{
+    static void gc();  ///< single @ref gc pass
+    uint ref;          ///< reference counter
+    /// @}
+
     Object();
     virtual ~Object();
     virtual void dump();

@@ -13,5 +13,18 @@ void dump() {
 void push(Object* o) {
     assert(Dp < Dsz);
     D[Dp++] = o;
-    o->rc();
+    o->ref++;
+}
+
+Object* pop() {
+    assert(Dp > 0);
+    return D[--Dp];
+}
+
+void dot() {
+    while (Dp) {
+        Object* o = pop();
+        if (!o->ref--) delete o;
+    }
+    Object::gc();
 }

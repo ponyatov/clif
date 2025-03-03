@@ -1,5 +1,6 @@
 #include "object.hpp"
 #include "libc.hpp"
+#include "vm.hpp"
 
 Object* Object::pool = nullptr;
 
@@ -12,6 +13,6 @@ Object::Object() {
 
 Object::~Object() { assert(ref == 0); }
 
-void Object::rc() { ref++; }
-
 void Object::dump() { printf("<object:> @%p\n", this); }
+
+void Object::gc() { assert(!Dp); }

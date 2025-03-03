@@ -1,5 +1,6 @@
 #include "main.hpp"
 #include "syntax.hpp"
+#include "vm.hpp"
 
 int main(int argc, char *argv[]) {
     arg(0, argv[0]);
@@ -10,6 +11,7 @@ int main(int argc, char *argv[]) {
         yyparse();
         fclose(yyin);
         yyfile = nullptr;
+        dot();
     }
 }
 
