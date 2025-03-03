@@ -1,0 +1,6 @@
+%{
+    #include "clif.hpp"
+%}
+
+%%
+syntax:
