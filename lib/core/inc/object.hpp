@@ -10,6 +10,7 @@ class Object {
     uint ref;
 
    public:
+    void rc(); //< @ref ref ++
     Object();
     virtual ~Object();
     virtual void dump();

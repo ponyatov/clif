@@ -12,4 +12,6 @@ Object::Object() {
 
 Object::~Object() { assert(!ref); }
 
+void Object::rc() { ref++; }
+
 void Object::dump() { printf("<object:> @%p\n", this); }

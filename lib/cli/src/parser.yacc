@@ -1,5 +1,6 @@
 %{
     #include "syntax.hpp"
+    #include "vm.hpp"
 %}
 
 %defines %union { Object *o; }
@@ -9,7 +10,7 @@
 
 %%
 
-syntax: | syntax ex { $2->dump(); }
+syntax: | syntax ex { push($2); dump(); }
 
 ex : INT
    | NUM
