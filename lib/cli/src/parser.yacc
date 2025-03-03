@@ -2,7 +2,14 @@
     #include "syntax.hpp"
 %}
 
-%defines %union { char c; int n; float f; char *s; }
+%defines %union { Object *o; }
+
+%token<o> INT NUM
+%type<o>  ex
 
 %%
-syntax:
+
+syntax: | syntax ex { $2->dump(); }
+
+ex : INT
+   | NUM
