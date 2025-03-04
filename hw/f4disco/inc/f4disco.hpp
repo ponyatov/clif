@@ -8,10 +8,19 @@
 ///
 /// ![](https://static.chipdip.ru/lib/485/DOC001485849.jpg)
 ///
-/// - LEDs
-///   - LD1 (red/green) for USB communication
-///   - LD2 (red) for 3.3 V power on
-///   - LD3 (orange)
-///   - LD4 (green)
-///   - LD5 (red)
-///   - LD6 (blue)
+/// @{
+#pragma once
+
+#include "led.hpp"
+
+/// @name LEDs
+/// @{
+extern LED LD1;  ///< LD1 (red/green) for USB communication
+extern LED LD2;  ///< LD2 (red) for 3.3 V power on
+extern LED LD3;  ///< LD3 (orange)
+extern LED LD4;  ///< LD4 (green)
+extern LED LD5;  ///< LD5 (red)
+extern LED LD6;  ///< LD6 (blue)
+/// @}
+
+/// @}

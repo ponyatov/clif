@@ -7,10 +7,10 @@
 #include "object.hpp"
 
 class Pin : public Object {
-    uint n;
+    uint pin;
 
    public:
-    Pin(uint n);
+    Pin(uint pin);
 };
 
 /// @}
