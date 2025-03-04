@@ -1,5 +1,5 @@
 %{
-    #include "syntax.hpp"
+    #include "parser.hpp"
     char *yyfile = nullptr;
 %}
 

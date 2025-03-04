@@ -1,6 +1,6 @@
 #include "libc.hpp"
 #include "prim.hpp"
-#include "syntax.hpp"
+#include "parser.hpp"
 
 %%machine hex;
 %%write  data;

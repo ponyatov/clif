@@ -3,7 +3,7 @@
 #include "libc.hpp"
 #include "core.hpp"
 
-/// @defgroup syntax syntax
+/// @defgroup parser parser
 /// @ingroup cli
 /// @brief parser interface
 /// @{

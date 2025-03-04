@@ -1,5 +1,5 @@
 #include "main.hpp"
-#include "syntax.hpp"
+#include "parser.hpp"
 #include "vm.hpp"
 
 __attribute__((weak)) int main(int argc, char *argv[]) {
