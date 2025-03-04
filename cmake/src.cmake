@@ -58,3 +58,18 @@ file(GLOB INC
     hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Inc
 )
 include_directories(${INC})
+
+file(GLOB L
+    RELATIVE ${CMAKE_SOURCE_DIR}
+    src/*.lex lib/src/*.lex lib/*/src/*.lex
+)
+
+file(GLOB Y
+    RELATIVE ${CMAKE_SOURCE_DIR}
+    src/*.yacc lib/src/*.yacc lib/*/src/*.yacc
+)
+
+file(GLOB R
+    RELATIVE ${CMAKE_SOURCE_DIR}
+    src/*.ragel lib/src/*.ragel lib/*/src/*.ragel
+)
