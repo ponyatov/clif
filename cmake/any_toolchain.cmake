@@ -32,6 +32,7 @@ add_compile_options(
     -Wno-implicit-fallthrough   # ragel
     -Wno-unused-function        # flex
     -Wno-write-strings          # yacc
+    -Wno-unused-parameter       # stm32
     $<$<CONFIG:Debug>:-DDEBUG>
 )
 
