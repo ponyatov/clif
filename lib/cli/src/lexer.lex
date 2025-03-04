@@ -9,10 +9,11 @@ s [+\-]
 n [0-9]
 
 %%
-#[^\n]*     {}              // line comment
-[ \t\r\n]+  {}              // drop spaces
+#[^\n]*         {}                  // line comment
+[ \t\r\n]+      {}                  // drop spaces
 
-{s}{n}+\.{n}+   TOKEN(Num,NUM)  // float
-{s}{n}+         TOKEN(Int,INT)  // integer
+{s}?{n}+\.{n}+  TOKEN(Num,NUM)      // float
+0x[0-9a-fA-F]+  TOKEN(Hex,INT)      // hexadecimal
+{s}?{n}+        TOKEN(Int,INT)      // integer
 
-.           {yyerror("");}  // any undetected char
+.               {yyerror("lex");}   // any undetected char

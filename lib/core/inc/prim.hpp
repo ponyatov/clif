@@ -9,10 +9,18 @@
 /// @ingroup prim
 /// @brief signed integer number
 class Int : public Object {
+   protected:
     int value;
 
    public:
     Int(char* s);
+    Int(int n);
+    void dump();
+};
+
+class Hex : public Int {
+   public:
+    Hex(char* s);
     void dump();
 };
 
