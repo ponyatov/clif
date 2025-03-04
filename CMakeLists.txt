@@ -28,5 +28,4 @@ set_target_properties(${CMAKE_PROJECT_NAME}
 install(TARGETS ${CMAKE_PROJECT_NAME}
     DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-include(cross)
 include(clean)
