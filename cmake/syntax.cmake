@@ -17,25 +17,24 @@ set(RAGEL_EXECUTABLE_opts -C -G2 )
 #     )
 # endforeach()
 
-# foreach(LEX_FILE ${L})
-#     string(REGEX REPLACE ".+\/(.+)\.lex$" "tmp/\\1.lex.cpp"
-#                             PARSER_CPP ${LEX_FILE})
-#     list(APPEND CP          ${PARSER_CPP})
-#     add_custom_command(
-#         OUTPUT              ${CMAKE_SOURCE_DIR}/${PARSER_CPP}
-#         DEPENDS             ${LEX_FILE}
-#         WORKING_DIRECTORY   ${CMAKE_SOURCE_DIR}
-#         COMMAND             ${FLEX_EXECUTABLE}
-#         ARGS                -o ${PARSER_CPP} ${LEX_FILE}
-#     )
-# endforeach()
+foreach(LEX_FILE ${L})
+    string(REGEX REPLACE ".+\/(.+)\.lex$" "${CMAKE_BINARY_DIR}/\\1.lex.cpp"
+        LEXER_CPP           ${LEX_FILE})
+    list(APPEND CP          ${LEXER_CPP})
+    add_custom_command(
+        OUTPUT              ${LEXER_CPP}
+        DEPENDS             ${LEX_FILE}
+        WORKING_DIRECTORY   ${CMAKE_SOURCE_DIR}
+        COMMAND             ${FLEX_EXECUTABLE}
+        ARGS                -o ${LEXER_CPP} ${LEX_FILE}
+    )
+endforeach()
 
 foreach(YACC_FILE ${Y})
     string(REGEX REPLACE ".+\/(.+)\.yacc$" "${CMAKE_BINARY_DIR}/\\1.yacc.cpp"
-        PARSER_CPP ${YACC_FILE})
+        PARSER_CPP          ${YACC_FILE})
     string(REGEX REPLACE ".+\/(.+)\.yacc$" "${CMAKE_BINARY_DIR}/\\1.yacc.hpp"
-        PARSER_HPP ${YACC_FILE})
-    message("-- | " ${YACC_FILE} " " ${PARSER_CPP})
+        PARSER_HPP          ${YACC_FILE})
     list(APPEND CP          ${PARSER_CPP})
     list(APPEND HP          ${PARSER_HPP})
     add_custom_command(
