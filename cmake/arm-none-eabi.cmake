@@ -26,3 +26,15 @@ add_link_options(
     -Wl,--start-group -lstdc++ -lsupc++ -Wl,--end-group
     -Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections
 )
+
+# ARM cross compiler binaries
+set(ELF ${CMAKE_INSTALL_PREFIX}/${BIN_OUTPUT_NAME}.elf)
+set(DFU ${CMAKE_INSTALL_PREFIX}/${BIN_OUTPUT_NAME}.dfu)
+
+add_custom_command(
+    OUTPUT  ${DFU}
+    DEPENDS ${ELF}
+    COMMAND ../elf2dfuse/bin/elf2dfuse ${ELF} ${DFU}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
+add_custom_target(dfu DEPENDS ${DFU})

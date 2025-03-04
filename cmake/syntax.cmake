@@ -2,20 +2,18 @@ find_package(RAGEL REQUIRED)
 find_package(FLEX  REQUIRED)
 find_package(BISON REQUIRED)
 
-set(RAGEL_EXECUTABLE_opts -C -G2 )
-
-# foreach(RAGEL_FILE ${RL})
-#     string(REGEX REPLACE ".+\/(.+)\.ragel$" "${CMAKE_CURRENT_SOURCE_DIR}/\\1.ragel.cpp"
-#                             PARSER_CPP ${RAGEL_FILE})
-#     list(APPEND CP          ${PARSER_CPP})
-#     add_custom_command(
-#         OUTPUT              ${CMAKE_SOURCE_DIR}/${PARSER_CPP}
-#         DEPENDS             ${RAGEL_FILE}
-#         WORKING_DIRECTORY   ${CMAKE_SOURCE_DIR}
-#         COMMAND             ${RAGEL_EXECUTABLE}
-#         ARGS                ${RAGEL_EXECUTABLE_opts} -o ${PARSER_CPP} ${RAGEL_FILE}
-#     )
-# endforeach()
+foreach(RAGEL_FILE ${R})
+    string(REGEX REPLACE ".+\/(.+)\.ragel$" "${CMAKE_BINARY_DIR}/\\1.ragel.cpp"
+        RAGEL_CPP           ${RAGEL_FILE})
+    list(APPEND CP          ${RAGEL_CPP})
+    add_custom_command(
+        OUTPUT              ${RAGEL_CPP}
+        DEPENDS             ${RAGEL_FILE}
+        WORKING_DIRECTORY   ${CMAKE_SOURCE_DIR}
+        COMMAND             ${RAGEL_EXECUTABLE}
+        ARGS                -C -G2 -o ${RAGEL_CPP} ${RAGEL_FILE}
+    )
+endforeach()
 
 foreach(LEX_FILE ${L})
     string(REGEX REPLACE ".+\/(.+)\.lex$" "${CMAKE_BINARY_DIR}/\\1.lex.cpp"
