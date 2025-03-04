@@ -20,8 +20,8 @@ file(GLOB C
     lib/src/*.c* lib/*/src/*.c*
     # CortexM/CubeMX
     hw/${HW}/Core/Src/*.c*
-    hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Source/*.c*
-    hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Src/*.c*
+    # hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Source/*.c*
+    # hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Src/*.c*
 )
 
 file(GLOB H
@@ -35,10 +35,11 @@ file(GLOB H
     # libs
     lib/inc/*.h* lib/*/inc/*.h*
     # CortexM/CubeMX
-    hw/${HW}/Core/Inc/*.h*
-    hw/${HW}/Drivers/CMSIS/Include/*.h*
-    hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Include/*.h*
-    hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Inc/*.h*
+    hw/${HW}/Inc/*.h*
+    # hw/${HW}/Core/Inc/*.h*
+    # hw/${HW}/Drivers/CMSIS/Include/*.h*
+    # hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Include/*.h*
+    # hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Inc/*.h*
 )
 
 file(GLOB INC
@@ -52,10 +53,11 @@ file(GLOB INC
     # libs
     lib/inc lib/*/inc
     # CortexM/CubeMX
-    hw/${HW}/Core/Inc
-    hw/${HW}/Drivers/CMSIS/Include
-    hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Include
-    hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Inc
+    hw/${HW}/Inc
+    # hw/${HW}/Core/Inc
+    # hw/${HW}/Drivers/CMSIS/Include
+    # hw/${HW}/Drivers/CMSIS/Device/ST/${SERIES}xx/Include
+    # hw/${HW}/Drivers/${SERIES}xx_HAL_Driver/Inc
 )
 include_directories(${INC})
 
