@@ -1,1 +1,1 @@
-TARGET = $(ARCH)-$(OS)-gnu
+ TARGET = $(ARCH)-$(OS)-gnu
