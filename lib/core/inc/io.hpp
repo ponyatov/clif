@@ -1,12 +1,17 @@
 /// @defgroup io io
-/// @ingroup core
+/// @ingroup lib
+/// @brief hardware i/o abstraction
 /// @{
 
 #pragma once
 
 #include "object.hpp"
 
-class Pin : public Object {
+/// @brief generic i/o peripherial
+class IO : public Object {};
+
+/// @brief GPIO
+class Pin : public IO {
     uint pin;
 
    public:

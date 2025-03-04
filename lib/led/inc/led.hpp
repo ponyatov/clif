@@ -1,5 +1,6 @@
 /// @defgroup led led
-/// @ingroup lib
+/// @ingroup io
+/// @brief LED control
 /// @{
 
 #pragma once
@@ -22,6 +23,9 @@ class LED : public Object {
 
    public:
     LED(Color c, Pin p);
+    void on();
+    void off();
+    void toggle();
 };
 
 /// @}
