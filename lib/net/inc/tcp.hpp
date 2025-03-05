@@ -1,2 +1,3 @@
-/// @defgroup tcp tcp
+/// @defgroup tcp TCP
 /// @ingroup ip
+/// @brief Transmission Control Protocol (RFC 793)

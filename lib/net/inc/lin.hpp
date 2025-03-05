@@ -1,3 +1,3 @@
-/// @defgroup lin lin
+/// @defgroup lin LIN
 /// @ingroup protocol
-/// @brief LIN: Local Interconnect Network
+/// @brief Local Interconnect Network
