@@ -1,5 +1,6 @@
 # HW ?= pc
-HW ?= f4disco
+# HW ?= f4disco
+HW ?= l496disco
 
 ELF = $(BIN)/$(BINFILE).elf
 DFU = $(BIN)/$(BINFILE).dfu
