@@ -27,6 +27,7 @@
                 "${appInclude}", "${crossInclude}", "${libInclude}"
             ],
             "defines": [
+                "HAVE_INITFINI_ARRAY", "HAVE_INIT_FINI"
             ]
         }
     ]
