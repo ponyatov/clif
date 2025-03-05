@@ -30,10 +30,10 @@
             "type"           : "shell",
             "group"          : {"kind": "build", "isDefault": true},
             "dependsOn"      : "CMake: build",
-            "command"        : "openocd -f ${workspaceFolder}/hw/${command:cmake.activeConfigurePresetName}/${command:cmake.activeConfigurePresetName}.ocd -c \"program ${command:cmake.launchTargetPath} verify reset\"",
+            "command"        : "openocd -f ${workspaceFolder}/hw/${command:cmake.activeConfigurePresetName}/${command:cmake.activeConfigurePresetName}.ocd -c \"program ${command:cmake.launchTargetPath} verify reset exit\"",
             "problemMatcher" : [],
             "presentation"   : {
-                "showReuseMessage": false
+                "showReuseMessage": false, "close": true
             }
         },
         {
