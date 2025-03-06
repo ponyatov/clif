@@ -8,7 +8,7 @@
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${workspaceFolder}",
             // "preLaunchTask": "debug: openocd",
-            // "preLaunchTask": "CMake: build",
+            "preLaunchTask": "CMake: build",
             "MIMode": "gdb",
             "miDebuggerPath": "gdb-multiarch",
             "miDebuggerArgs": "--silent",

@@ -35,16 +35,6 @@
             "presentation"   : {
                 "showReuseMessage": false, "focus": false, "close": true
             }
-        },
-        {
-            "type"           : "cmake",
-            "label"          : "cmake: build",
-            "command"        : "build",
-            "targets"        : ["all"],
-            "preset"         : "${command:cmake.activeBuildPresetName}",
-            "group"          : "build",
-            "problemMatcher" : [],
-            "promptOnClose"  : false
-        },
+        }
     ]
 }
