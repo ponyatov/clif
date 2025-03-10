@@ -29,7 +29,7 @@
                 // {"text": "b DefaultHandler"},
                 // {"text": "b SystemInit"},
                 // {"text": "b __libc_init_array"},
-                {"text": "b main"},
+                // {"text": "b main"},
                 // {"text": "b MX_GPIO_Init"},
                 // {"text": "b sbrk"}, {"text": "b _sbrk"},
                 // {"text": "b jsvObjectSetChild"},

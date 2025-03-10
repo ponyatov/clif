@@ -17,9 +17,9 @@ __attribute__((weak)) int main(int argc, char *argv[]) {
 }
 #endif  // BARE
 
-__attribute__((weak)) void arg(int argc, char *argv) {
+extern "C" void __attribute__((weak)) arg(int argc, char *argv) {
     fprintf(stderr, "argv[%i] = <%s>\n", argc, argv);
 }
 
-__attribute__((weak)) void setup(void) {}
-__attribute__((weak)) void loop(void) {}
+extern "C" void __attribute__((weak)) setup(void) {}
+extern "C" void __attribute__((weak)) loop(void) {}

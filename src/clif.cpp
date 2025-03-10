@@ -1,19 +1,5 @@
 #include "clif.hpp"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+extern "C" void setup(void) {}
 
-void setup(void) {
-    for (;;)
-        ;
-}
-
-void loop(void) {
-    for (;;)
-        ;
-}
-
-#ifdef __cplusplus
-}
-#endif
+extern "C" void loop(void) {}
