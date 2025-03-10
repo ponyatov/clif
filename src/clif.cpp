@@ -1,4 +1,5 @@
 #include "clif.hpp"
+#include <usbd_cdc_if.h>
 
 extern "C" void setup(void) {}
 
