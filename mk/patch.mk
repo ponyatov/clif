@@ -9,4 +9,4 @@ all:
 	dos2unix $(FILES)
 	$(MAKE) -f $(MAKEFILE_LIST) $(FIXES)
 %.fix: %
-	patch -u $< $<.patch && touch $@
+	-patch -u $< $<.patch && touch $@
