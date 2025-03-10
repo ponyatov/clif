@@ -32,6 +32,7 @@
         // embedded
         "ms-vscode.vscode-serial-monitor",
         "ms-vscode.hexeditor",
+        "awsxxf.serialterminal",
         "zixuanwang.linkerscript",
         "dan-c-underwood.arm",
         // ESP32

@@ -61,6 +61,10 @@
     "clang-format.fallbackStyle":  "Google",
     "clang-format.style":          "file",
 
+    // terminal
+    "SerialTerminal.script.savePath":"${workspaceFolder}/tmp/scripts",
+    "SerialTerminal.serial port.configurations": ["115200n1","9600n1"],
+
     // C++
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format",
