@@ -3,6 +3,8 @@ include mk/dirs.mk
 include mk/cross.mk
 include mk/tool.mk
 include mk/src.mk
+include mk/debug.mk
 include mk/format.mk
 include mk/doc.mk
-include mk/debug.mk
+include mk/ref.mk
+include mk/install.mk
