@@ -1,1 +1,3 @@
-void setup(void) {}
+void setup(void) {
+    for(;;);
+}
