@@ -21,5 +21,5 @@ __attribute__((weak)) void arg(int argc, char *argv) {
     fprintf(stderr, "argv[%i] = <%s>\n", argc, argv);
 }
 
-// __attribute__((weak)) void setup(void) {}
+__attribute__((weak)) void setup(void) {}
 __attribute__((weak)) void loop(void) {}
