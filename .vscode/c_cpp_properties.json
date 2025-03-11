@@ -19,7 +19,7 @@
         ],
         "usbInclude": [
             "${workspaceFolder}/hw/f4disco/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc",
-            "${workspaceFolder}/hw/f4disco/USB_DEVICE/App"
+            "${workspaceFolder}/hw/f4disco/USB_DEVICE/App",
         ]
     },
     "configurations": [

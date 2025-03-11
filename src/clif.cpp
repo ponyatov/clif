@@ -28,11 +28,11 @@ extern "C" int _write(int file, char *ptr, int len) {
 
     char c = 0;
 extern "C" void loop(void) {
-    // sprintf((char *)buf, "Hello, %i\n", n++);
+    sprintf((char *)buf, "Hello, %i\n", n++);
+    CDC_Transmit_FS(buf, strlen((char *)buf));
     // printf("Hello, %i\n", n++);
-    // CDC_Transmit_FS(buf, strlen((char *)buf));
     // __io_putchar(c++);
-    putchar(c++);
+    // putchar(c++);
     // __io_putchar('A');
     HAL_Delay(22);
 }
