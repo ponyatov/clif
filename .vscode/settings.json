@@ -27,13 +27,14 @@
         "lib/python*": true, "lib64":true, "include":true,
     },
     "files.watcherExclude": {
-        "ref/**": true,
+        "ref/**": true, "target/**": true,
     },
     "files.associations": {
         "*.mk": "makefile", "mk": "makefile", "cmake": "cmake",
         "*.ini": "flang", "*.f": "flang",
         "*.ocd": "properties", "*.gdb*": "properties",
         "*.ld": "linkerscript", "*.ld.fix": "linkerscript",
+        "memory.x": "linkerscript",
         "*.ioc": "properties", "*.config": "properties",
         "*.s": "arm", "*.s.fix": "arm", "*.S": "arm",
         //
@@ -64,6 +65,18 @@
     // terminal
     "SerialTerminal.serial port.configurations": ["115200n1","9600n1"],
 
+    // JavaScript
+    "prettier.configPath"         : "${workspaceFolder}/.prettierrc",
+    "prettier.requireConfig"      :  true,
+    "[javascript]": {
+        "editor.defaultFormatter" : "esbenp.prettier-vscode",
+        "editor.formatOnSave"     :  false
+    },
+    "[json,jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave":     false
+    },
+
     // C++
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format",
@@ -88,6 +101,15 @@
         "cwd" :   "${workspaceFolder}",
         "args": [ "${workspaceFolder}/lib/${workspaceFolderBasename}.ini" ] },
     "cmake.allowCommentsInPresetsFile" : true,
+
+    // Python
+    "autopep8.path": ["/usr/bin/autopep8"],
+    "autopep8.args": ["--ignore E26,E302,E305,E401,E402,E701,E702"],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave"    :  false
+    },
+    "python.analysis.extraPaths": ["./scripts"],
 
     // MinGW/MSYS2
     "terminal.integrated.defaultProfile.windows":  "UCRT64",
