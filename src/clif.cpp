@@ -22,7 +22,7 @@ extern "C" int _write(int file, char *ptr, int len) {
 
 extern "C" _ssize_t _write_r(struct _reent *ptr, int fd, const void *buf,
                              size_t cnt) {
-    return _write(fd,(char*)buf,cnt);
+    return _write(fd, (char *)buf, cnt);
 }
 
 extern "C" void loop(void) {
