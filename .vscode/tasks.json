@@ -26,6 +26,12 @@
             "problemMatcher" : []
         },
         {
+            "label"          : "git: checkout .vscode",
+            "type"           : "shell",
+            "command"        : "git checkout .vscode/settings.json",
+            "problemMatcher" : []
+        },
+        {
             "label"          : "openocd: debug",
             "type"           : "shell",
             "group"          : {"kind": "build", "isDefault": true },
