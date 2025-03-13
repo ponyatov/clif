@@ -37,7 +37,7 @@
                 "ISKRAJS"  , "STM32F405xx", "STM32F4",
                 "__FPU_PRESENT", "__FPU_USED",
                 "HAVE_INITFINI_ARRAY", "HAVE_INIT_FINI",
-                "_REENT_SMALL",
+                "_REENT_SMALL", "DEFINE_MALLOC"
             ]
         }
     ]
