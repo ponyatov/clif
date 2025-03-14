@@ -56,6 +56,7 @@
     "files.trimFinalNewlines": true,
     "git.enabled": false,
     "terminal.integrated.copyOnSelection": true,
+    "dotnet.defaultSolution": "disable",
 
     // clang-format
     "clang-format.executable":     "clang-format",
